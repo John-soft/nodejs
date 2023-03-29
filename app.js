@@ -69,23 +69,69 @@
 // });
 
 
+// const fs = require('fs').promises;
+// const util = require('util');
+
+// function getText(path) {
+//     return new Promise((resolve, reject) => {
+//         fs.readFile(path, 'utf8', (err, data)=>{
+//             if (err) {
+//                 reject(err);
+//             }else{
+//                 resolve(data);
+//             }
+//         })
+//     })
+// }
+
+
+// async function start(){
+//     try {
+//         const first = await fs.readFile('./content/info.txt', 'utf-8');
+//         console.log(first);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// start();
+
+
+
+// getText('./content/info.txt')
+// .then((result => console.log(result)))
+// .catch((err) => console.log(err));
+
+
+
+//Events in nodejs
+
+// const EventEmitter = require('events');
+
+// const customEmitter = new EventEmitter();
+
+// customEmitter.on('response', () =>{
+//     console.log('Data received...');
+// });
+
+// customEmitter.emit('response');
+
 const fs = require('fs');
 
-function getText(path) {
-    return new Promise((resolve, reject) => {
-        fs.readFile(path, 'utf8', (err, data)=>{
-            if (err) {
-                reject(err);
-            }else{
-                resolve(data);
-            }
-        })
-    })
+for (let i = 0; i < 10000; i++) {
+    console.log('Hello world');    
 }
 
-getText('./content/info.txt')
-.then((result => console.log(result)))
-.catch((err) => console.log(err));
+
+
+
+
+
+
+
+
+
+
+
 
 
 
